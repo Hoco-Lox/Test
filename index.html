@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Šta Ima? - Besplatni Događaji</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="loadEvents()">
+    <header>
+        <h1>Šta Ima?</h1>
+        <p>Pronađite i organizujte besplatne događaje u vašoj blizini</p>
+    </header>
+    <div class="notification" id="notification"></div>
+    <main>
+        <section id="search">
+            <input type="text" id="eventSearch" placeholder="Pretraži događaje...">
+            <button onclick="searchEvents()">Pretraži</button>
+        </section>
+        <section id="events"></section>
+        <section id="create-event">
+            <h2>Kreiraj Događaj</h2>
+            <input type="text" id="eventName" placeholder="Naziv događaja">
+            <input type="date" id="eventDate">
+            <input type="time" id="eventTime">
+            <input type="text" id="eventLocation" placeholder="Lokacija">
+            <select id="eventCategory">
+                <option value="muzika">Muzika</option>
+                <option value="sport">Sport</option>
+                <option value="umetnost">Umetnost</option>
+                <option value="druzenje">Druženje</option>
+                <option value="ostalo">Ostalo</option>
+            </select>
+            <button onclick="addEvent()">Dodaj Događaj</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
